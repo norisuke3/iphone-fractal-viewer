@@ -28,7 +28,7 @@
     CGRect rect = [[UIScreen mainScreen] applicationFrame];
     CGRect canvasRect = CGRectMake(0.0, 0.0, 960.0, 1380.0);
     
-    mCanvas = [[[Canvas alloc] initWithFrame:canvasRect] autorelease];
+    mCanvas = [[[[Canvas alloc] initWithFrame:canvasRect] autorelease] retain];
     mCanvas.backgroundColor = [UIColor whiteColor];
     mCanvas.dataSource = self;
     
