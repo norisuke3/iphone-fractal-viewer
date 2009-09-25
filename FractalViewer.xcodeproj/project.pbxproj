@@ -139,16 +139,14 @@
 			isa = PBXGroup;
 			children = (
 				8CE48193106D30B5001F76C2 /* maps */,
-				8C23D0D2106D3FA100C3C4E4 /* Canvas.h */,
-				8C23D0D3106D3FA100C3C4E4 /* Canvas.m */,
-				8C23D0D6106D3FA100C3C4E4 /* Coordinate.h */,
-				8C23D0D7106D3FA100C3C4E4 /* Coordinate.m */,
 				8C23D0D8106D3FA100C3C4E4 /* FractalViewController.h */,
 				8C23D0D9106D3FA100C3C4E4 /* FractalViewController.m */,
 				8C23D0DE106D3FA100C3C4E4 /* RevertableScrollView.h */,
 				8C23D0DF106D3FA100C3C4E4 /* RevertableScrollView.m */,
 				8C23D0E0106D3FA100C3C4E4 /* TouchSensitiveView.h */,
 				8C23D0E1106D3FA100C3C4E4 /* TouchSensitiveView.m */,
+				8C23D0D2106D3FA100C3C4E4 /* Canvas.h */,
+				8C23D0D3106D3FA100C3C4E4 /* Canvas.m */,
 			);
 			name = Fractal;
 			sourceTree = "<group>";
@@ -156,6 +154,8 @@
 		8CE48193106D30B5001F76C2 /* maps */ = {
 			isa = PBXGroup;
 			children = (
+				8C23D0D6106D3FA100C3C4E4 /* Coordinate.h */,
+				8C23D0D7106D3FA100C3C4E4 /* Coordinate.m */,
 				8C23D0D4106D3FA100C3C4E4 /* ColoredMandelbrotSet.h */,
 				8C23D0D5106D3FA100C3C4E4 /* ColoredMandelbrotSet.m */,
 				8C23D0DA106D3FA100C3C4E4 /* LogisticMap.h */,
