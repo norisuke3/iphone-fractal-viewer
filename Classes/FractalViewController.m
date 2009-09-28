@@ -29,6 +29,8 @@
     CGRect rect = [[UIScreen mainScreen] applicationFrame];
     CGRect canvasRect = CGRectMake(0.0, 0.0, 960.0, 1380.0);
     
+    self.navigationController.navigationBarHidden = YES;
+    
     mCanvas = [[[[Canvas alloc] initWithFrame:canvasRect mapClassName:mapClassName] autorelease] retain];
     mCanvas.backgroundColor = [UIColor whiteColor];
     mCanvas.dataSource = self;
@@ -78,11 +80,20 @@
     NSLog(@"Saved.");
 }
 
+- (void)backToTheMapMenu{
+    self.navigationController.navigationBarHidden = NO;
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)actionSheet:(UIActionSheet*)actionSheet
 clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if(buttonIndex == 0){
+        [self backToTheMapMenu];
+        
+    } else if (buttonIndex == 1){
         [self saveLogisticMapToPhotoAlbum];
+        
     }
     [actionSheet release];
 }
