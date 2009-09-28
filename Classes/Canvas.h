@@ -21,5 +21,6 @@
 
 -(void)zoom:(float)scale;
 -(void)setOrigin:(CGPoint)origin;
+-(id)initWithFrame:(CGRect)frame mapClassName:(NSString*)name;
 
 @end

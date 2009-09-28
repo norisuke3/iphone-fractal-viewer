@@ -15,7 +15,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    NSArray *names, *mapClassNames;
     names = [NSArray arrayWithObjects:@"Logistic Map", @"Mandelbrot Set", @"Mandelbrot Set (Colored)", nil];
+    mapClassNames = [NSArray arrayWithObjects:@"LogisticMap", @"MandelbrotSet", @"ColoredMandelbrotSet", nil];
+    maps = [[NSDictionary dictionaryWithObjects:mapClassNames forKeys:names] retain];
+    
     self.title = @"Fractal Viewer";
 }
 
@@ -71,7 +75,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [names count];
+    return [maps count];
 }
 
 
@@ -86,7 +90,7 @@
     }
     
     // Configure the cell.
-    cell.textLabel.text = [names objectAtIndex:indexPath.row];
+    cell.textLabel.text = [[maps allKeys] objectAtIndex:indexPath.row];
 
     return cell;
 }
@@ -97,6 +101,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
 {
     FractalViewController* fractalViewController = [[FractalViewController alloc] initWithNibName:@"FractalViewController" bundle:nil];
+    fractalViewController.mapClassName = [maps objectForKey:[[maps allKeys] objectAtIndex:indexPath.row]];
     [self.navigationController pushViewController:fractalViewController animated:YES];
     [fractalViewController release];
 }
@@ -144,6 +149,7 @@
 
 
 - (void)dealloc {
+    [maps release];
     [super dealloc];
 }
 

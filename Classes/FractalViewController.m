@@ -13,6 +13,7 @@
 
 @implementation FractalViewController
 
+@synthesize mapClassName;
 @synthesize mCanvas;
 
 - (id) initWithCoder:(NSCoder *)aDecoder{
@@ -28,7 +29,7 @@
     CGRect rect = [[UIScreen mainScreen] applicationFrame];
     CGRect canvasRect = CGRectMake(0.0, 0.0, 960.0, 1380.0);
     
-    mCanvas = [[[[Canvas alloc] initWithFrame:canvasRect] autorelease] retain];
+    mCanvas = [[[[Canvas alloc] initWithFrame:canvasRect mapClassName:mapClassName] autorelease] retain];
     mCanvas.backgroundColor = [UIColor whiteColor];
     mCanvas.dataSource = self;
     
@@ -100,6 +101,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
 
 - (void)dealloc {
     [mCanvas release];
+    [mapClassName release];
     [super dealloc];
 }
 

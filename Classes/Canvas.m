@@ -23,6 +23,15 @@
     return self;
 }
 
+-(id)initWithFrame:(CGRect)frame mapClassName:(NSString*)name{
+    if (self = [super initWithFrame:frame]){
+        Class mapClass = NSClassFromString(name);
+        map = [[mapClass alloc] init];
+        lastScale = 1.0;
+    }
+    return self;
+}
+
 - (void)drawRect:(CGRect)rect {
     // Drawing code
     CGContextRef c = UIGraphicsGetCurrentContext();

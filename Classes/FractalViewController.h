@@ -10,10 +10,12 @@
 @class TouchSensitiveView;
 
 @interface FractalViewController : UIViewController < UIActionSheetDelegate, UIScrollViewDelegate >{
+    NSString* mapClassName;
     TouchSensitiveView* mCanvas;
     CGPoint SCROLL_VIEW_BOUNDS_ORIGIN;
 }
 
+@property (retain) NSString* mapClassName;
 @property (retain) TouchSensitiveView* mCanvas;
 
 @end
