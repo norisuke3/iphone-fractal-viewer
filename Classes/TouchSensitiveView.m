@@ -14,7 +14,7 @@
 
 - (void) startTimer{
     if (!timer) {
-        timer = [[NSTimer scheduledTimerWithTimeInterval:1.3f target:self 
+        timer = [[NSTimer scheduledTimerWithTimeInterval:1.0f target:self 
                                                 selector:@selector(timerFired:)
                                                 userInfo:nil
                                                  repeats:NO] retain];
@@ -49,7 +49,7 @@
                            delegate:dataSource
                            cancelButtonTitle:@"Cancel"
                            destructiveButtonTitle:nil
-                           otherButtonTitles:@"Back to the menu", @"Save to Photo Album", nil
+                           otherButtonTitles:@"Back to main menu", @"Save to Photo Album", nil
                            ];
     
     [menu showInView:dataSource.view];
