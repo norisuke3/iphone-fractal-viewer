@@ -10,6 +10,8 @@
 #import "LogisticMap.h"
 #import "MandelbrotSet.h"
 #import "ColoredMandelbrotSet.h"
+#import "JuliaSet.h"
+#import "ColoredJuliaSet.h"
 
 @implementation Canvas
 

@@ -16,8 +16,8 @@
     [super viewDidLoad];
 
     NSArray *names, *mapClassNames;
-    names = [NSArray arrayWithObjects:@"Logistic Map", @"Mandelbrot Set", @"Mandelbrot Set (Colored)", nil];
-    mapClassNames = [NSArray arrayWithObjects:@"LogisticMap", @"MandelbrotSet", @"ColoredMandelbrotSet", nil];
+    names = [NSArray arrayWithObjects:@"Logistic Map", @"Mandelbrot Set", @"Mandelbrot Set (Colored)", @"Julia Set", @"Julia Set (Colored)", nil];
+    mapClassNames = [NSArray arrayWithObjects:@"LogisticMap", @"MandelbrotSet", @"ColoredMandelbrotSet", @"JuliaSet", @"ColoredJuliaSet", nil];
     maps = [[NSDictionary dictionaryWithObjects:mapClassNames forKeys:names] retain];
     
     self.title = @"Fractal Viewer";

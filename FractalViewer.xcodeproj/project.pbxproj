@@ -24,6 +24,8 @@
 		8C23D0E8106D3FA100C3C4E4 /* RevertableScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C23D0DF106D3FA100C3C4E4 /* RevertableScrollView.m */; };
 		8C23D0E9106D3FA100C3C4E4 /* TouchSensitiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C23D0E1106D3FA100C3C4E4 /* TouchSensitiveView.m */; };
 		8C7ACF191071D9BC002503FB /* ifoneicon6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C7ACF181071D9BC002503FB /* ifoneicon6.jpg */; };
+		8C7ACF49107280E2002503FB /* JuliaSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ACF48107280E2002503FB /* JuliaSet.m */; };
+		8CB323C210728B880015B295 /* ColoredJuliaSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB323C110728B880015B295 /* ColoredJuliaSet.m */; };
 		8CE481EB106D36E4001F76C2 /* FractalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CE481EA106D36E4001F76C2 /* FractalViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,10 @@
 		8C23D0E0106D3FA100C3C4E4 /* TouchSensitiveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchSensitiveView.h; sourceTree = "<group>"; };
 		8C23D0E1106D3FA100C3C4E4 /* TouchSensitiveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchSensitiveView.m; sourceTree = "<group>"; };
 		8C7ACF181071D9BC002503FB /* ifoneicon6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ifoneicon6.jpg; sourceTree = "<group>"; };
+		8C7ACF47107280E2002503FB /* JuliaSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JuliaSet.h; sourceTree = "<group>"; };
+		8C7ACF48107280E2002503FB /* JuliaSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JuliaSet.m; sourceTree = "<group>"; };
+		8CB323C010728B880015B295 /* ColoredJuliaSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColoredJuliaSet.h; sourceTree = "<group>"; };
+		8CB323C110728B880015B295 /* ColoredJuliaSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColoredJuliaSet.m; sourceTree = "<group>"; };
 		8CE481EA106D36E4001F76C2 /* FractalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FractalViewController.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* FractalViewer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FractalViewer-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,10 +167,14 @@
 				8C23D0D7106D3FA100C3C4E4 /* Coordinate.m */,
 				8C23D0D4106D3FA100C3C4E4 /* ColoredMandelbrotSet.h */,
 				8C23D0D5106D3FA100C3C4E4 /* ColoredMandelbrotSet.m */,
+				8CB323C010728B880015B295 /* ColoredJuliaSet.h */,
+				8CB323C110728B880015B295 /* ColoredJuliaSet.m */,
 				8C23D0DA106D3FA100C3C4E4 /* LogisticMap.h */,
 				8C23D0DB106D3FA100C3C4E4 /* LogisticMap.m */,
 				8C23D0DC106D3FA100C3C4E4 /* MandelbrotSet.h */,
 				8C23D0DD106D3FA100C3C4E4 /* MandelbrotSet.m */,
+				8C7ACF47107280E2002503FB /* JuliaSet.h */,
+				8C7ACF48107280E2002503FB /* JuliaSet.m */,
 			);
 			name = maps;
 			sourceTree = "<group>";
@@ -243,6 +253,8 @@
 				8C23D0E7106D3FA100C3C4E4 /* MandelbrotSet.m in Sources */,
 				8C23D0E8106D3FA100C3C4E4 /* RevertableScrollView.m in Sources */,
 				8C23D0E9106D3FA100C3C4E4 /* TouchSensitiveView.m in Sources */,
+				8C7ACF49107280E2002503FB /* JuliaSet.m in Sources */,
+				8CB323C210728B880015B295 /* ColoredJuliaSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
