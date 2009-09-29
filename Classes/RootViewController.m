@@ -15,24 +15,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSArray *names, *mapClassNames;
-    names = [NSArray arrayWithObjects:
+    names = [[NSArray arrayWithObjects:
                 @"Logistic Map", 
                 @"Mandelbrot Set", 
                 @"Mandelbrot Set (Colored)", 
                 @"Julia Set",
                 @"Julia Set (Colored)",
                 @"Julia Set2 (Colored)",
-                nil];
-    mapClassNames = [NSArray arrayWithObjects:
+                nil] retain];
+    mapClassNames = [[NSArray arrayWithObjects:
                         @"LogisticMap", 
                         @"MandelbrotSet", 
                         @"ColoredMandelbrotSet", 
                         @"JuliaSet", 
                         @"ColoredJuliaSet",
                         @"ColoredJuliaSet2",
-                        nil];
-    maps = [[NSDictionary dictionaryWithObjects:mapClassNames forKeys:names] retain];
+                        nil] retain];
     
     self.title = @"Fractal Viewer";
 }
@@ -89,7 +87,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [maps count];
+    return [names count];
 }
 
 
@@ -103,10 +101,8 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    int row = [maps count] - indexPath.row - 1;
-    
     // Configure the cell.
-    cell.textLabel.text = [[maps keysSortedByValueUsingSelector:@selector(compare:)] objectAtIndex:row];
+    cell.textLabel.text = [names objectAtIndex:indexPath.row];
 
     return cell;
 }
@@ -116,11 +112,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
 {
-    int row = [maps count] - indexPath.row - 1;
-    NSString* key = [[maps keysSortedByValueUsingSelector:@selector(compare:)] objectAtIndex:row];
-    
     FractalViewController* fractalViewController = [[FractalViewController alloc] initWithNibName:@"FractalViewController" bundle:nil];
-    fractalViewController.mapClassName = [maps objectForKey:key];
+    fractalViewController.mapClassName = [mapClassNames objectAtIndex:indexPath.row];
     [self.navigationController pushViewController:fractalViewController animated:YES];
     [fractalViewController release];
 }
@@ -168,7 +161,8 @@
 
 
 - (void)dealloc {
-    [maps release];
+    [names release];
+    [mapClassNames release];
     [super dealloc];
 }
 

@@ -7,7 +7,7 @@
 //
 
 @interface RootViewController : UITableViewController {
-    NSDictionary* maps;
+    NSArray *names, *mapClassNames;
 }
 
 @end
