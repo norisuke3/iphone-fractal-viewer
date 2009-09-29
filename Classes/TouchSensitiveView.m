@@ -49,7 +49,7 @@
                            delegate:dataSource
                            cancelButtonTitle:@"Cancel"
                            destructiveButtonTitle:nil
-                           otherButtonTitles:@"Back to main menu", @"Save to Photo Album", nil
+                           otherButtonTitles:@"Back to Main Menu", @"Save to Photo Album", nil
                            ];
     
     [menu showInView:dataSource.view];
