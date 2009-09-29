@@ -13,6 +13,7 @@
     NSString* mapClassName;
     TouchSensitiveView* mCanvas;
     CGPoint SCROLL_VIEW_BOUNDS_ORIGIN;
+    CGPoint lastOffset;
 }
 
 @property (retain) NSString* mapClassName;

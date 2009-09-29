@@ -63,9 +63,9 @@
     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
 }
 
--(void)zoom:(float)theScale{
-    CGPoint adjusted = CGPointMake( ( 1.0 - 1.0 / theScale * lastScale ) / 2.0 * (320.0 * 3.0),
-                                   ( 1.0 - 1.0 / theScale * lastScale ) / 2.0 * (460.0 * 3.0));
+-(void)zoom:(float)theScale onOffset:(CGPoint)offset{
+    CGPoint adjusted = CGPointMake( offset.x + ( 1.0 - 1.0 / theScale * lastScale ) / 2.0 * (320.0 * 3.0),
+                                   offset.y + ( 1.0 - 1.0 / theScale * lastScale ) / 2.0 * (460.0 * 3.0));
     CGPoint originOnMap = CGPointApplyAffineTransform(adjusted, self.viewToMap);
     
     [map modifyRect:originOnMap scale:theScale / 3.0];

@@ -20,7 +20,7 @@
 @property (readonly)CGAffineTransform mapToImageContext;
 @property (readonly)CGAffineTransform viewToMap;
 
--(void)zoom:(float)scale;
+-(void)zoom:(float)scale onOffset:(CGPoint)offset;
 -(void)setOrigin:(CGPoint)origin;
 -(id)initWithFrame:(CGRect)frame mapClassName:(NSString*)name;
 -(void)drawToImageContext;

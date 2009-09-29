@@ -20,6 +20,7 @@
     self = [super initWithCoder:aDecoder];
     if (self != nil) {
         SCROLL_VIEW_BOUNDS_ORIGIN = CGPointMake(320.0, 460.0);
+        lastOffset = CGPointMake(0.0, 0.0);
     }
     return self;
 }
@@ -60,7 +61,7 @@
                       withView:(UIView *)view
                        atScale:(float)scale
 {
-    [(Canvas*)mCanvas zoom:scale];
+    [(Canvas*)mCanvas zoom:scale onOffset:lastOffset];
     
     [(RevertableScrollView*)scrollView revert];
 
@@ -68,15 +69,33 @@
     [mCanvas setNeedsDisplay];
 }
 
+-(void)setCanvasOrigin:(UIScrollView*)scrollView{
+    if (scrollView.bounds.origin.x < 100 ||
+        scrollView.bounds.origin.y < 100 ||
+        scrollView.bounds.origin.x > 540 ||
+        scrollView.bounds.origin.y > 820
+        ) {
+        CGPoint offset = scrollView.bounds.origin;
+        
+        [(Canvas*)mCanvas setOrigin:offset];
+        
+        [(RevertableScrollView*)scrollView revert];
+        
+        [mCanvas resetRect];
+        [mCanvas setNeedsDisplay];
+    }
+}
+
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    if (!decelerate) {
+        [self setCanvasOrigin:scrollView];
+        lastOffset = CGPointMake(scrollView.bounds.origin.x - 320, scrollView.bounds.origin.y - 460);
+    }
+}
+
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    CGPoint offset = scrollView.bounds.origin;
-    
-    [(Canvas*)mCanvas setOrigin:offset];
-    
-    [(RevertableScrollView*)scrollView revert];
-    
-    [mCanvas resetRect];
-    [mCanvas setNeedsDisplay];
+    [self setCanvasOrigin:scrollView];
+    lastOffset = CGPointMake(scrollView.bounds.origin.x - 320, scrollView.bounds.origin.y - 460);
 }
 
 
