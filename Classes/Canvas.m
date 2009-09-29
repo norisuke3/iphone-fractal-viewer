@@ -12,6 +12,7 @@
 #import "ColoredMandelbrotSet.h"
 #import "JuliaSet.h"
 #import "ColoredJuliaSet.h"
+#import "ColoredJuliaSet2.h"
 
 @implementation Canvas
 
