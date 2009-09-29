@@ -23,6 +23,7 @@
 		8C23D0E7106D3FA100C3C4E4 /* MandelbrotSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C23D0DD106D3FA100C3C4E4 /* MandelbrotSet.m */; };
 		8C23D0E8106D3FA100C3C4E4 /* RevertableScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C23D0DF106D3FA100C3C4E4 /* RevertableScrollView.m */; };
 		8C23D0E9106D3FA100C3C4E4 /* TouchSensitiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C23D0E1106D3FA100C3C4E4 /* TouchSensitiveView.m */; };
+		8C7ACF191071D9BC002503FB /* ifoneicon6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C7ACF181071D9BC002503FB /* ifoneicon6.jpg */; };
 		8CE481EB106D36E4001F76C2 /* FractalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CE481EA106D36E4001F76C2 /* FractalViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		8C23D0DF106D3FA100C3C4E4 /* RevertableScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RevertableScrollView.m; sourceTree = "<group>"; };
 		8C23D0E0106D3FA100C3C4E4 /* TouchSensitiveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchSensitiveView.h; sourceTree = "<group>"; };
 		8C23D0E1106D3FA100C3C4E4 /* TouchSensitiveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchSensitiveView.m; sourceTree = "<group>"; };
+		8C7ACF181071D9BC002503FB /* ifoneicon6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ifoneicon6.jpg; sourceTree = "<group>"; };
 		8CE481EA106D36E4001F76C2 /* FractalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FractalViewController.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* FractalViewer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FractalViewer-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				8C7ACF181071D9BC002503FB /* ifoneicon6.jpg */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -218,6 +221,7 @@
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				28F335F11007B36200424DE2 /* RootViewController.xib in Resources */,
 				8CE481EB106D36E4001F76C2 /* FractalViewController.xib in Resources */,
+				8C7ACF191071D9BC002503FB /* ifoneicon6.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
