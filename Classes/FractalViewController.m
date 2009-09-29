@@ -85,7 +85,7 @@
 }
 
 - (void)saveLogisticMapToPhotoAlbum{
-    NSLog(@"Saved.");
+    [(Canvas*)mCanvas drawToImageContext];
 }
 
 - (void)backToTheMapMenu{

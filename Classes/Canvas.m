@@ -44,6 +44,23 @@
     CGContextStrokePath(c);
 }
 
+-(void)drawToImageContext{
+    UIGraphicsBeginImageContext([[UIScreen mainScreen] applicationFrame].size);
+    CGContextRef c = UIGraphicsGetCurrentContext();
+    
+    CGContextConcatCTM(c, self.mapToImageContext);
+    
+    map.context = c;
+    [map draw];
+    
+    CGContextStrokePath(c);
+    
+    UIImage* image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+}
+
 -(void)zoom:(float)theScale{
     CGPoint adjusted = CGPointMake( ( 1.0 - 1.0 / theScale * lastScale ) / 2.0 * (320.0 * 3.0),
                                    ( 1.0 - 1.0 / theScale * lastScale ) / 2.0 * (460.0 * 3.0));
@@ -63,6 +80,16 @@
 
 -(CGAffineTransform)mapToView{
     return CGAffineTransformInvert(self.affineTransform);
+}
+
+-(CGAffineTransform)mapToImageContext{
+    CGAffineTransform result = CGAffineTransformIdentity;
+    
+    result = CGAffineTransformConcat(result, CGAffineTransformMakeTranslation(320.0, 460.0));
+    result = CGAffineTransformConcat(result, self.affineTransform);
+    result = CGAffineTransformInvert(result);
+    
+    return result;
 }
 
 -(CGAffineTransform)viewToMap{

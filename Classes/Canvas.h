@@ -17,10 +17,12 @@
 
 @property (readonly)CGAffineTransform affineTransform;
 @property (readonly)CGAffineTransform mapToView;
+@property (readonly)CGAffineTransform mapToImageContext;
 @property (readonly)CGAffineTransform viewToMap;
 
 -(void)zoom:(float)scale;
 -(void)setOrigin:(CGPoint)origin;
 -(id)initWithFrame:(CGRect)frame mapClassName:(NSString*)name;
+-(void)drawToImageContext;
 
 @end
