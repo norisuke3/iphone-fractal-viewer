@@ -24,6 +24,14 @@
     return self;
 }
 
+- (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self != nil) {
+        SCROLL_VIEW_BOUNDS_ORIGIN = CGPointMake(320.0, 460.0);
+    }
+    return self;
+}
+
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
     CGRect rect = [[UIScreen mainScreen] applicationFrame];
