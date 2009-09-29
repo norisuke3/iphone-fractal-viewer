@@ -2,8 +2,8 @@
 //  FractalViewerAppDelegate.m
 //  FractalViewer
 //
-//  Created by Hamamoto Noriaki on 09/09/25.
-//  Copyright __MyCompanyName__ 2009. All rights reserved.
+//  Created by Nori@FireDictionary on 09/09/25.
+//  Copyright FireDictionary.com 2009. All rights reserved.
 //
 
 #import "FractalViewerAppDelegate.h"

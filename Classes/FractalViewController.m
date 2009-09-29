@@ -2,8 +2,8 @@
 //  LogisticMapTestViewController.m
 //  LogisticMapTest
 //
-//  Created by Hamamoto Noriaki on 09/09/22.
-//  Copyright __MyCompanyName__ 2009. All rights reserved.
+//  Created by Nori@FireDictionary on 09/09/22.
+//  Copyright FireDictionary.com 2009. All rights reserved.
 //
 
 #import "FractalViewController.h"

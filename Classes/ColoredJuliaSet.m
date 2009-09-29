@@ -2,8 +2,8 @@
 //  ColoredJuliaSet.m
 //  LogisticMapTest
 //
-//  Created by Hamamoto Noriaki on 09/09/29.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//  Created by Nori@FireDictionary on 09/09/29.
+//  Copyright 2009 FireDictionary.com. All rights reserved.
 //
 
 #import "ColoredJuliaSet.h"

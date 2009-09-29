@@ -2,8 +2,8 @@
 //  LogisticMap.m
 //  DrawSample
 //
-//  Created by Hamamoto Noriaki on 09/09/22.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//  Created by Nori@FireDictionary on 09/09/22.
+//  Copyright 2009 FireDictionary.com. All rights reserved.
 //
 
 #import "LogisticMap.h"
