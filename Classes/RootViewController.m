@@ -89,8 +89,10 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
+    int row = [maps count] - indexPath.row - 1;
+    
     // Configure the cell.
-    cell.textLabel.text = [[maps allKeys] objectAtIndex:indexPath.row];
+    cell.textLabel.text = [[maps keysSortedByValueUsingSelector:@selector(compare:)] objectAtIndex:row];
 
     return cell;
 }
@@ -100,8 +102,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
 {
+    int row = [maps count] - indexPath.row - 1;
+    NSString* key = [[maps keysSortedByValueUsingSelector:@selector(compare:)] objectAtIndex:row];
+    
     FractalViewController* fractalViewController = [[FractalViewController alloc] initWithNibName:@"FractalViewController" bundle:nil];
-    fractalViewController.mapClassName = [maps objectForKey:[[maps allKeys] objectAtIndex:indexPath.row]];
+    fractalViewController.mapClassName = [maps objectForKey:key];
     [self.navigationController pushViewController:fractalViewController animated:YES];
     [fractalViewController release];
 }
