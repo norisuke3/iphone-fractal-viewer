@@ -1,5 +1,14 @@
 This is an iPhone application for observing Fractal sets.
 
+
+
+[![](http://img.skitch.com/20090930-j2eyc868u254qy8erwycxjpyn3.jpg)](http://img.skitch.com/20090930-fuuanqqgnrdxt87m5u2dgr8b9r.jpg)
+[![](http://img.skitch.com/20090930-883bf5egek4s89643bydgn45m3.jpg)](http://img.skitch.com/20090930-jpfib6jrqystj8gaj2srabae62.jpg)
+[![](http://img.skitch.com/20090930-piixggy5kqhdadratmjp8rdp3c.jpg)](http://img.skitch.com/20090930-d5xd6e3qpuxfgcfh5trgqt53pt.jpg)
+[![](http://img.skitch.com/20090930-djjn9x8abgcqyygxdmkei2xq7r.jpg)](http://img.skitch.com/20090930-8w16rk55sef3ec8nh995gsgan.jpg)
+[![](http://img.skitch.com/20090930-nay2tsap216uf86th5hdj1mkeq.jpg)](http://img.skitch.com/20090930-kykux8g9edqenjyqw1qfjfk8c2.jpg)
+[!(http://img.skitch.com/20090930-xmu7brjifpwfr7ni8p65dpnj1c.jpg)](http://img.skitch.com/20090930-cdgtgryu34pbxehbyb4f4ucjtk.jpg)
+
 You can choose one of a fractal set or a logistic map from the main menu,
 then you can see its shape and zoom it by pinching the iPhone/iPod Touch screen.
 
