@@ -1,8 +1,8 @@
 //
 //  TouchSensitiveView.m
-//  DrawSample
+//  FractalViewer
 //
-//  Created by Nori@FireDictionary on 09/09/18.
+//  Created by norisuke3@gmail.com on 09/09/18.
 //  Copyright 2009 FireDictionary.com. All rights reserved.
 //
 

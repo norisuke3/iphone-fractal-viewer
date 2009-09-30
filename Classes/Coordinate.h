@@ -1,8 +1,8 @@
 //
 //  Coordinate.h
-//  DrawSample
+//  FractalViewer
 //
-//  Created by Nori@FireDictionary on 09/09/22.
+//  Created by norisuke3@gmail.com on 09/09/22.
 //  Copyright 2009 FireDictionary.com. All rights reserved.
 //
 
