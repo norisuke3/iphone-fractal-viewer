@@ -108,14 +108,13 @@
 }
 
 
-
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    FractalViewController* fractalViewController = [[FractalViewController alloc] initWithNibName:@"FractalViewController" bundle:nil];
-    fractalViewController.mapClassName = [mapClassNames objectAtIndex:indexPath.row];
-    [self.navigationController pushViewController:fractalViewController animated:YES];
-    [fractalViewController release];
+    NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
+    NSString* mapClassName = [mapClassNames objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+
+    [ud setObject:mapClassName forKey:@"mapClassName"];
+    [self performSegueWithIdentifier:@"rowNumber" sender:self];
 }
 
 

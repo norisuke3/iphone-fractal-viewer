@@ -22,6 +22,8 @@
         SCROLL_VIEW_BOUNDS_ORIGIN = CGPointMake(320.0, 460.0);
         lastOffset = CGPointMake(0.0, 0.0);
     }
+    UIView* view = self.view;
+
     return self;
 }
 
@@ -35,6 +37,9 @@
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
+    NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
+    NSString* mapClassName = [ud stringForKey:@"mapClassName"];
+
     CGRect rect = [[UIScreen mainScreen] applicationFrame];
     CGRect canvasRect = CGRectMake(0.0, 0.0, 960.0, 1380.0);
     
